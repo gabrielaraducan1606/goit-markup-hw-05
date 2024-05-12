@@ -24,7 +24,7 @@
         </div>
         <nav class="header__navigation">
           <ul class="header__ul">
-            <li><a href="./index.html">Studio</a></li>
+            <li><a href="./index.html" class="active">Studio</a></li>
             <li><a href="./portofolio.html">Portofolio</a></li>
             <li><a href="#">Contacts</a></li>
           </ul>
@@ -49,7 +49,7 @@
               YOUR BUSINESS
             </h1>
             <div class="header-button">
-              <button class="header__request" type="button">
+              <button data-modal-open class="header__request" type="button">
                 Request our service
               </button>
             </div>
@@ -99,24 +99,30 @@
         <div class="container">
           <h2 class="what-we-do-section__title">What we do</h2>
           <div class="what-we-do-img">
+           
+            <div 
+            class="overlay__img">
+             <div class="what-we-do-section__overlay">DESKTOP APPS</div>
             <img
               src="images/box1.jpg"
-              width="370"
-              height="294"
               alt="security code"
-            />
+            /></div>
+             
+             <div 
+            class="overlay__img">
+            <div class="what-we-do-section__overlay">MOBILE APPS</div>
             <img
               src="images/box2.jpg"
-              width="370"
-              height="294"
               alt="mobile security"
-            />
-            <img
+            /></div>
+             
+            <div 
+            class="overlay__img">
+            <div class="what-we-do-section__overlay">DESIGN SOLUTIONS</div>
+             <img
               src="images/box3.jpg"
-              width="370"
-              height="294"
               alt="color palette"
-            />
+            /></div>
           </div>
         </div>
       </section>
@@ -277,7 +283,8 @@
       <!--Customers section-->
       <section class="customers__section">
         <h2 class="customers__title">Regular Customers</h2>
-        <ul class="customers__ul"><li class="customers__li"><a href=""><svg class="customers__svg"><use href="./images/icons.svg#icon-Logo" /></svg></a></li>
+        <ul class="customers__ul">
+          <li><a href=""><svg class="customers__svg"><use href="./images/icons.svg#icon-Logo" /></svg></a></li>
  <li><a href=""><svg class="customers__svg"><use href="./images/icons.svg#icon-Logo-2" /></svg></a></li>
   <li><a href=""><svg class="customers__svg"><use href="./images/icons.svg#icon-Logo-5" /></svg></a></li>
    <li><a href=""><svg class="customers__svg"><use href="./images/icons.svg#icon-Logo-3" /></svg></a></li>
@@ -310,5 +317,11 @@
         <li><a href=""><svg class="contact-svg"><use href="./images/icons.svg#icon-linkedin" /></svg></a></li>
      </ul></div>
     </footer>
+    <div data-modal class="is-hidden"> 
+      <div data-modal-content="">
+<button data-modal-close type="button" class="close__button">X</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
